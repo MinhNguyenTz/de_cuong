@@ -7,5 +7,6 @@
         "vector": "cpp",
         "string_view": "cpp",
         "span": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
