@@ -14,7 +14,6 @@ namespace {
 }
 
 const int maxN = 1e5 + 7;
-int a[maxN];
 
 int main(){
 	ios::sync_with_stdio(NULL); cin.tie(NULL); cout.tie(NULL);
@@ -23,12 +22,15 @@ int main(){
 			
 	int m, cnt = 0, tong = 0; cin >> m;
 	f0(i, m){
-		cin >> a[i];
-		tong += a[i];
+		int a; cin >> a;
+		tong += a;
 	}
 
-	f0(i, m){
-		if (!(tong % a[i])) cnt++;
+	for (int i = 1; i*i <= tong; i++){
+		if (!(tong % i)){
+			if (tong/i != sqrt(tong)) cnt += 2;
+			else cnt++;
+		}
 	} 
 	cout << cnt;
 

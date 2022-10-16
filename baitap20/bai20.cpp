@@ -15,10 +15,17 @@ namespace {
 
 const int maxN = 1e5 + 7;
 
+ll gcd (ll a, ll b){
+	if (b == 0) return a;
+	return gcd(b, a % b);
+}
+
 int main(){
 	ios::sync_with_stdio(NULL); cin.tie(NULL); cout.tie(NULL);
-    freopen ("bai.inp", "r", stdin);
-    freopen ("bai.out", "w", stdout);
+    freopen ("bai20.inp", "r", stdin);
+    freopen ("bai20.out", "w", stdout);
 			
+	ll a, b; cin >> a >> b;
+	cout << gcd(a,b);
 	return 0;
 }

@@ -15,10 +15,24 @@ namespace {
 
 const int maxN = 1e5 + 7;
 
+ll pw (ll x, ll n){
+	n--;
+	while (n--) x *= x;
+	return x;
+}
+ll t (ll n, ll a){
+	ll ans = 1;
+	for (int i = 2; i <= n; i++) ans += pw(i, a);
+	return ans;
+}
+
 int main(){
 	ios::sync_with_stdio(NULL); cin.tie(NULL); cout.tie(NULL);
-    freopen ("bai.inp", "r", stdin);
-    freopen ("bai.out", "w", stdout);
+    freopen ("bai19.inp", "r", stdin);
+    freopen ("bai19.out", "w", stdout);
 			
+	ll a, n; cin >> a >> n;
+	cout << t(n, a); // Bị tràn với test lớn
+
 	return 0;
 }

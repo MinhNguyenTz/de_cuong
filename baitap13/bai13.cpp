@@ -17,8 +17,16 @@ const int maxN = 1e5 + 7;
 
 int main(){
 	ios::sync_with_stdio(NULL); cin.tie(NULL); cout.tie(NULL);
-    freopen ("bai.inp", "r", stdin);
-    freopen ("bai.out", "w", stdout);
+    freopen ("bai13.inp", "r", stdin);
+    freopen ("bai13.out", "w", stdout);
 			
+	int n; cin >> n;
+	ll s = 0;
+	f1(i, n){
+		ll a; cin >> a;
+		if (i&1) s += a;
+	}
+
+	cout << s;
 	return 0;
 }
