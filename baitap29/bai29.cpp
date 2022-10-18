@@ -14,11 +14,20 @@ namespace {
 }
 
 const int maxN = 1e5 + 7;
+ll a[maxN];
 
 int main(){
 	ios::sync_with_stdio(NULL); cin.tie(NULL); cout.tie(NULL);
-    freopen ("bai.inp", "r", stdin);
-    freopen ("bai.out", "w", stdout);
+    freopen ("bai29.inp", "r", stdin);
+    freopen ("bai29.out", "w", stdout);
 			
+	ll n, k; cin >> n >> k;
+	a[0] = k;
+	f1(i, n) cin >> a[i];
+	sort(a, a + n + 1);
+
+	for (int i = 0; i <= n; i++){
+		cout << a[i] << " ";
+	}
 	return 0;
 }

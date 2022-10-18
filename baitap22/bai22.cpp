@@ -14,11 +14,32 @@ namespace {
 }
 
 const int maxN = 1e5 + 7;
+ll a[maxN];
 
 int main(){
 	ios::sync_with_stdio(NULL); cin.tie(NULL); cout.tie(NULL);
-    freopen ("bai.inp", "r", stdin);
-    freopen ("bai.out", "w", stdout);
+    freopen ("bai22.inp", "r", stdin);
+    freopen ("bai22.out", "w", stdout);
 			
+	ll n, k; cin >> n >> k;
+	int l, r, exist = 0;
+
+	f0(i, n){
+		ll a; cin >> a;
+		if (a == k){
+			if (exist) r = i + 1;
+			else l = i + 1, exist = 1, r = l;
+		}
+	}
+
+	if (!exist) {
+		cout << "NO";
+		return 0;
+	}
+	else{
+		if (l == r) cout << l;
+		else cout << l << " " << r;
+	}
+
 	return 0;
 }
