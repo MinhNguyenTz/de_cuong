@@ -17,8 +17,16 @@ const int maxN = 1e5 + 7;
 
 int main(){
 	ios::sync_with_stdio(NULL); cin.tie(NULL); cout.tie(NULL);
-    freopen ("bai.inp", "r", stdin);
-    freopen ("bai.out", "w", stdout);
+    freopen ("bai36.inp", "r", stdin);
+    freopen ("bai36.out", "w", stdout);
 			
+	string s; cin >> s;
+	unordered_map <char, ll> track;
+
+	for (auto x: s){
+		if (!track.count(x)){
+			cout << x; track[x]++;
+		}
+	}
 	return 0;
 }

@@ -13,12 +13,18 @@ namespace {
 	#define ll long long
 }
 
-const int maxN = 1e5 + 7;
+const int maxN = 1e6;
+ll a[maxN];
 
 int main(){
 	ios::sync_with_stdio(NULL); cin.tie(NULL); cout.tie(NULL);
-    freopen ("bai.inp", "r", stdin);
-    freopen ("bai.out", "w", stdout);
+    freopen ("bai43.inp", "r", stdin);
+    freopen ("bai43.out", "w", stdout);
 			
+	ll m, n; cin >> m >> n;
+	ll t = m + n;
+	f0(i, t) cin >> a[i];
+	sort(a, a + t);
+	f0(i, t) cout << a[i] << " ";
 	return 0;
 }
